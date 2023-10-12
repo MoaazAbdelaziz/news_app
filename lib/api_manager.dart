@@ -5,12 +5,13 @@ import 'package:news_app/models/news_response/news_response.dart';
 import 'package:news_app/models/sources_response/sources_response.dart';
 
 class ApiManger {
-  static Future<SourceResponse> getSources() async {
+  static Future<SourceResponse> getSources(String categoryID) async {
     Uri url = Uri.https(
       ApiConstants.baseUrl,
       ApiConstants.sourceApi,
       {
         'apiKey': '1f0d0f4ab962404886dbcaf080d6cb2b',
+        'category': categoryID,
       },
     );
     try {
