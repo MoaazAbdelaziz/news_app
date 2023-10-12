@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/home/widgets/category_details.dart';
 import 'package:news_app/home/home_view.dart';
 import 'package:news_app/my_theme.dart';
 
@@ -17,8 +18,9 @@ class NewsApp extends StatelessWidget {
       theme: MyTheme.lightTheme,
       routes: {
         HomeView.routeName: (context) => const HomeView(),
+        CategoryDetails.routeName: (context) => const CategoryDetails(),
       },
-      initialRoute: HomeView.routeName,
+      initialRoute: CategoryDetails.routeName,
     );
   }
 }
